@@ -1,0 +1,28 @@
+Q1. The relationship between a class and its instances is typically a one-to-many partnership. A class is a blueprint or template for creating objects, and you can create multiple instances (objects) based on a single class. Each instance represents a unique entity with its own data and state, but they share the same structure and behavior defined by the class.
+
+Q2. Instances hold instance-specific data, often referred to as instance variables. These variables store data that is unique to each instance and can have different values for each object created from the same class.
+
+Q3. A class stores knowledge in the form of class variables and methods. Class variables are shared among all instances of the class and can be used to store data that is common to all instances. Methods define the behaviors or actions that objects of the class can perform.
+
+Q4. A method is a function that is defined inside a class and operates on the class's data. The key difference between a method and a regular function is that methods are associated with a specific class and can access and modify the class's attributes (data) and call other methods of the class using the `self` parameter, which refers to the instance the method is called on.
+
+Q5. Yes, inheritance is supported in Python. Inheritance allows you to create a new class (subclass) that inherits attributes and behaviors from an existing class (base class or superclass). The syntax for inheritance in Python is as follows:
+
+```python
+class Subclass(BaseClass):
+    # Subclass-specific attributes and methods
+```
+
+Q6. Python supports encapsulation to some extent. You can make instance variables and methods private by prefixing them with a double underscore (`__`). However, it's important to note that this is name mangling, and the variables are not entirely private. They can still be accessed using special name mangling syntax.
+
+Q7. Class variables are shared among all instances of a class and are defined within the class but outside any method, typically at the class level. Instance variables are specific to each instance and are defined within methods using the `self` parameter.
+
+Q8. The `self` parameter is included in a class's method definitions to refer to the instance itself. It is required in all instance methods to access instance-specific attributes and methods. It is typically the first parameter in instance methods, but you can name it differently if you prefer, although using `self` is a widely-accepted convention.
+
+Q9. The `__add__` and `__radd__` methods are special methods in Python used for operator overloading. The `__add__` method is called when you use the `+` operator to add two objects, while `__radd__` is called when the right-hand side object does not support the operation, and Python tries to find a suitable method in the left-hand side object.
+
+Q10. Reflection methods, like `__getattr__`, are used when you want to dynamically intercept attribute access or method calls on an object. You don't need reflection methods when you have a predefined attribute or method that you can directly access. You use reflection methods to handle attributes or methods that are not explicitly defined in the class.
+
+Q11. The `__iadd__` method is called when you use the `+=` operator to modify an object in-place. It allows you to customize the behavior of the `+=` operation for instances of your class.
+
+Q12. Yes, the `__init__` method is inherited by subclasses. If you need to customize its behavior within a subclass, you can override it by defining a new `__init__` method in the subclass. To include the behavior of the parent class's `__init__` method in the subclass's `__init__`, you can call `super().__init__()` within the subclass's `__init__` method. This allows you to add additional initialization logic while still benefiting from the parent class's initialization.
